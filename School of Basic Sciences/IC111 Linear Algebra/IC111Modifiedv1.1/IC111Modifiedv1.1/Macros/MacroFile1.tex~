@@ -1,0 +1,24 @@
+
+
+\newcommand{\doublecircleplus}{
+        \includegraphics[height =4mm , width = 4mm]{doublecircleplus.png}
+}
+
+\newcommand{\doublecircledot}{
+        \includegraphics[height =4mm , width = 4mm]{doublecircledot.png}
+}
+
+\newcommand{\doublecircleminus}{
+        \includegraphics[height =4mm , width = 4mm]{doublecircleminus.png}
+}
+
+
+\newcommand{\IncludeGraphicsH}[3]{
+  \PdfPsText{\includegraphics[height=#2]{#1}}{\includegraphics[bb = #3, height=#2]{#1}}
+}
+
+\newcommand{\IncludeGraphicsW}[3]{
+  \PdfPsText{\includegraphics[width=#2]{#1}}{\includegraphics[bb = #3, width=#2]{#1}}
+}
+
+

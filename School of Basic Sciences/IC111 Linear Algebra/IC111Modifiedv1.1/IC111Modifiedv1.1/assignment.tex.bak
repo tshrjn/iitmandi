@@ -1,0 +1,65 @@
+
+% Version 1.0
+
+\documentclass[oneside,12pt]{Classes/iitmandiIC111}
+\include{Macros/MacroFile1}
+
+\ifpdf
+    \pdfinfo { 
+		/Title  (IC111 : Linear Algebra)
+               /Creator (TeX)
+               /Producer (pdfTeX)
+               /Author (Suraj Meghwani meghwani.suraj@gmail.com)
+               /CreationDate (D:20130225000000)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:20130225000000)
+               /Subject (Assignment No: 1)
+               /Keywords (Linear Algebra, IC111, IIT Mandi LA)
+             }
+    \pdfcatalog {
+		   /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  
+                }
+\fi
+
+
+\title{IC111\\[1ex]Linear Algebra}
+
+        
+\ifpdf
+  \author{\href{mailto:youremail@iitmandi.ac.in}{}}
+  \collegeordept{School of Basic Sciences}
+  \university{\href{http://iitmandi.ac.in}{Indian Institute of Technology-Mandi}}
+  \crest{\includegraphics[width=30mm]{iitmandi.jpg}}
+\else
+  \author{\href{mailto:youremail@iitmandi.ac.in}{}}
+  \collegeordept{School of Basic Sciences}
+  \university{Indian Institute of Technology-Mandi}
+  \crest{\includegraphics[bb = 0 0 292 336, width=30mm]{iitmandi}}
+\fi
+
+
+        
+        
+\degree{Bachelor of Engineering}
+\degreedate{ \today}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+
+% Comment out the next line to get single spacing
+\onehalfspacing
+
+\begin{document}
+
+\maketitle
+
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\newpage
+\include{Assignment1/Assignment1}
+
+\end{document}

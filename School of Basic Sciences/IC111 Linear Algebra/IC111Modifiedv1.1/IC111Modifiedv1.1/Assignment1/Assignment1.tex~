@@ -1,0 +1,55 @@
+\chapter{Vector Spaces}
+\ifpdf
+    \graphicspath{{Assignment1/Assignment1Figs/PNG/}{Assignment1/Assignment1Figs/PDF/}{Assignment1/Assignment1Figs/}}
+\else
+    \graphicspath{{Assignment1/Assignment1Figs/EPS/}{Assignment1/Assignment1Figs/}}
+\fi
+
+%%=======================================================================================================================
+
+\section{Group}
+
+\paragraph{Binary Operator: }A Binary operator on a non-empty set \textbf{S} is a map
+from its cartesian product \textbf{S} $\times$ \textbf{S} to \textbf{S}. Let
+\hspace{1mm} * \hspace{1mm} be the binary operation on \textbf{S} then we
+have
+
+\begin{equation*}
+ * : \textbf{S} \times \textbf{S} \longrightarrow \textbf{S}
+\end{equation*}
+
+\paragraph{Group: } A non-empty set $G$, together with a binary operation
+\hspace{1mm} * \hspace{1mm} is said to form a group, if it satisfies the following
+properties.
+
+\begin{enumerate}
+  \item \emph{Associativity: } $a*(b*c) = (a*b)*c$ \hspace{1cm} $\forall a,b,c \in G$.
+  \item \emph{Existence of Identity: } $\exists$ an element $e \in G$ such that
+	\begin{equation*}
+	  a*e = e*a = a \hspace{1cm} \forall a \in G
+	\end{equation*}
+	where, $e$ is the identity element.
+ \item \emph{Existence of inverse: } For every $a \in G, \hspace{1mm} \exists
+        \hspace{1mm} a' \in G$ such that
+	\begin{equation*}
+	  a*a' = a'*a = e
+	\end{equation*}
+	Here, $a'$ is called an inverse element of $a$.
+\end{enumerate}
+
+\paragraph{Remarks}
+\begin{enumerate}
+ \item If $\hspace{1mm} * \hspace{1mm}$ is a binary operation on $G$ then $G$ is said
+ to satisfy closure property.
+ \item Identity element for a group is unique.
+ \item Inverse of an element is also unique.
+ \item Existence of right identity and left inverse does not form a group.
+ \item Existence of left identity and right inverse also does not form a group.
+ \item In above definition, existence of right identity and right inverse is
+       sufficient to form a group because right identity is also left identity and
+       right inverse is also left inverse.
+ \item If $a'$ be the inverse element of $a$ then, $(a')' = a$.
+\end{enumerate}
+
+
+

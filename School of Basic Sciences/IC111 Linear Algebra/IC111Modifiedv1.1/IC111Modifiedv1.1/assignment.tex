@@ -1,0 +1,86 @@
+
+% Version 1.0
+
+\documentclass[oneside,12pt]{Classes/iitmandiIC111}
+\include{Macros/MacroFile1}
+\chead{}
+\definecolor{cbseblue}{HTML}{7388c7}
+\definecolor{cbsegreen}{HTML}{bcd490}
+\renewcommand{\headrule}{{\color{cbseblue} \hrule width\headwidth height\headrulewidth \vskip-\headrulewidth}}
+\renewcommand{\footrule}{{\color{cbseblue}\vskip-\footruleskip\vskip-\footrulewidth\hrule width\headwidth height\footrulewidth\vskip\footruleskip}}
+\ifpdf
+    \pdfinfo {
+		/Title  (IC111 : Linear Algebra)
+               /Creator (TeX)
+               /Producer (pdfTeX)
+               /Author (Suraj Meghwani meghwani.suraj@gmail.com)
+               /CreationDate (D:20130225000000)  %format D:YYYYMMDDhhmmss
+               /ModDate (D:20130401000000)
+               /Subject (Assignment No: 1)
+               /Keywords (Linear Algebra, IC111, IIT Mandi)
+             }
+    \pdfcatalog {
+		   /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)
+                }
+\fi
+
+
+\title{IC111\\[1ex]Linear Algebra}
+
+
+\ifpdf
+  \author{\href{mailto:youremail@iitmandi.ac.in}{}}
+  \collegeordept{School of Basic Sciences}
+  \university{\href{http://iitmandi.ac.in}{Indian Institute of Technology-Mandi}}
+  \crest{\includegraphics[width=30mm]{iitmandi.jpg}}
+\else
+  \author{\href{mailto:youremail@iitmandi.ac.in}{}}
+  \collegeordept{School of Basic Sciences}
+  \university{Indian Institute of Technology-Mandi}
+  \crest{\includegraphics[bb = 0 0 292 336, width=30mm]{iitmandi}}
+\fi
+
+% \AddToShipoutPicture{% from package eso-pic: put something to the background
+%     \ifthenelse{\isodd{\thepage}}{
+%           % ODD page: left bar
+%           \AtPageLowerLeft{% start the bar at the left bottom of the page
+%                 \color{blue}\rule{1cm}{\LenToUnit\paperheight}%
+%           }%
+%       }%
+%       {%
+%           % EVEN page: right bar
+%           \AtPageLowerLeft{% start the bar at the bottom right of the page
+%               \put(\LenToUnit{\dimexpr\paperwidth-0.5cm},0){% move it to the top right
+%                   \color{orange}\rule{0.5cm}{\LenToUnit\paperheight}%
+%                 }%
+%            }%
+%        }%
+% }
+\lfoot{\color{cbseblue}\textit{LA Ver. 1.1}}
+\cfoot{\color{cbseblue}\thepage}
+
+
+
+\degree{Bachelor of Engineering}
+\degreedate{ \today}
+
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+
+% Comment out the next line to get single spacing
+\onehalfspacing
+
+\begin{document}
+
+\maketitle
+
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\newpage
+\include{Assignment1/Assignment1}
+\end{document}

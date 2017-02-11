@@ -1,0 +1,938 @@
+\chapter{Vector Spaces}
+\ifpdf
+    \graphicspath{{Assignment1/Assignment1Figs/PNG/}{Assignment1/Assignment1Figs/PDF/}{Assignment1/Assignment1Figs/}}
+\else
+    \graphicspath{{Assignment1/Assignment1Figs/EPS/}{Assignment1/Assignment1Figs/}}
+\fi
+
+%%=======================================================================================================================
+
+\section{Group}
+
+\paragraph{Binary Operator: }A Binary operator on a non-empty set \textbf{S} is a map
+from its cartesian product \textbf{S} $\times$ \textbf{S} to \textbf{S}. Let 
+\hspace{1mm} * \hspace{1mm} be the binary operation on \textbf{S} then we 
+have
+
+\begin{equation*}
+ * : \textbf{S} \times \textbf{S} \longrightarrow \textbf{S}
+\end{equation*}
+
+\paragraph{Group: } A non-empty set $G$, together with a binary operation 
+\hspace{1mm} * \hspace{1mm} is said to form a group, if it satisfies the following 
+properties.
+
+\begin{enumerate}
+  \item \emph{Associativity: } $a*(b*c) = (a*b)*c$ \hspace{1cm} $\forall a,b,c \in G$.
+  \item \emph{Existence of Identity: } $\exists$ an element $e \in G$ such that
+	\begin{equation*}
+	  a*e = e*a = a \hspace{1cm} \forall a \in G
+	\end{equation*}
+	where, $e$ is the identity element.
+ \item \emph{Existence of inverse: } For every $a \in G, \hspace{1mm} \exists 
+        \hspace{1mm} a' \in G$ such that
+	\begin{equation*}
+	  a*a' = a'*a = e
+	\end{equation*}
+	Here, $a'$ is called an inverse element of $a$.
+\end{enumerate}
+
+\paragraph{Remarks} 
+\begin{enumerate}
+ \item If $\hspace{1mm} * \hspace{1mm}$ is a binary operation on $G$ then $G$ is said 
+ to satisfy closure property.
+ \item Identity element for a group is unique.
+ \item Inverse of an element is also unique.
+ \item Existence of right identity and left inverse does not form a group.
+ \item Existence of left identity and right inverse also does not form a group.
+ \item In above definition, existence of right identity and right inverse is 
+       sufficient to form a group because right identity is also left identity and 
+       right inverse is also left inverse.
+ \item If $a'$ be the inverse element of $a$ then, $(a')' = a$.
+\end{enumerate}
+
+ 
+ \subsection{Solved Examples }
+ 
+ \paragraph{Example 1: }\emph{Consider $V = \{ x | x \in \mathbb{R}^{n} \}$. Operation 
+ $\oplus$ in $V$ is defined as } 
+
+\begin{equation}
+ u \oplus v = 
+  \begin{bmatrix}
+    u_1 \\ u_2 \\ . \\. \\ u_n 
+  \end{bmatrix} \oplus \begin{bmatrix}
+			    v_1 \\ v_2 \\ . \\. \\ v_n 
+			\end{bmatrix} =
+  \begin{bmatrix}
+      u_1+v_1 \\ u_2+v_2 \\ . \\. \\ u_n+v_n 
+  \end{bmatrix}
+  \label{vectaddgrp}
+\end{equation}
+ \emph{where ``+'' is usual addition between real numbers. Show that the $(V,\oplus)$ 
+  is a group.}
+
+\paragraph{Solution : } In order to prove $V$ is a group, we check all its properties. \\
+ 
+ \begin{itemize}
+  
+    \item \textbf{Closure Property: } Since $u_i,v_i \in \mathbb{R}$  
+    then, $u_i + v_i \in \mathbb{R} \hspace{1cm} 
+      \forall i = 1,2,3...n$.     
+      \begin{center} 
+      Hence, \hspace{2mm}
+      $
+      \begin{bmatrix}
+      u_1+v_1 \\ u_2+v_2 \\ . \\. \\ u_n+v_n
+      \end{bmatrix} \hspace{2mm} \in \mathbb{R}^n  
+      \implies u \oplus v \in V \hspace{1cm} \forall u,v \in \mathbb{R}^n$
+      \end{center}
+      
+      Clearly, $(\mathbb{R}^n,\oplus)$ follows closure property.
+    
+    \item \textbf{Associativity: } $\forall u,v,w \in \mathbb{R}^n$ 
+    
+    Using equation $\eqref{vectaddgrp}$ we have,\\
+    $
+    \begin{array}{lll}
+    (u \oplus v) \oplus w  &= \left( \begin{bmatrix}
+                                    u_1 \\ u_2 \\ . \\. \\ u_n 
+                                \end{bmatrix} \oplus \begin{bmatrix}
+			                                v_1 \\ v_2 \\ . \\. \\ v_n 
+			                               \end{bmatrix} \right) \oplus
+			                               \begin{bmatrix}
+							      w_1 \\ w_2 \\ . \\. \\ w_n 
+							\end{bmatrix} & \\
+			    &=  \begin{bmatrix}
+					  u_1+v_1 \\ u_2+v_2 \\ . \\. \\ u_n+v_n 
+				      \end{bmatrix}  \oplus  \begin{bmatrix}
+							      w_1 \\ w_2 \\ . \\. \\ w_n 
+							\end{bmatrix}  
+			    =  \begin{bmatrix}
+					  (u_1+v_1)+w_1 \\ (u_2+v_2)+w_2 \\ . \\. \\ (u_n+v_n)+w_n 
+				      \end{bmatrix}  & \\    
+				      
+				          \end{array}
+$\\$
+\begin{array}{lll}
+
+			    &=  \begin{bmatrix}
+					  u_1+(v_1+w_1) \\ u_2+(v_2+w_2) \\ . \\. \\ u_n+(v_n+w_n) 
+				      \end{bmatrix}  \mbox{ (Addition of real numbers is associative)}&\\
+			    &=  \begin{bmatrix}
+					  u_1 \\ u_2 \\ . \\. \\ u_n 
+							\end{bmatrix} \oplus \begin{bmatrix}
+					  v_1+w_1 \\ v_2+w_2 \\ . \\. \\ v_n+w_n 
+				                      \end{bmatrix} &\\
+		           &= \begin{bmatrix}
+                                    u_1 \\ u_2 \\ . \\. \\ u_n 
+                                \end{bmatrix} \oplus \left( \begin{bmatrix}
+			                                v_1 \\ v_2 \\ . \\. \\ v_n 
+			                               \end{bmatrix}  \oplus
+			                               \begin{bmatrix}
+							      w_1 \\ w_2 \\ . \\. \\ w_n 
+							\end{bmatrix} \right) = u \oplus (v \oplus w) &\\
+    \end{array}
+    $ \\\\
+    Hence, $( u \oplus v) \oplus w =  u \oplus (v \oplus w)$.
+   
+    \item \textbf{Existence of identity element : }  Since, $ \overrightarrow{0}=\begin{bmatrix}
+			0 \\ 0 \\. \\. \\0
+		      \end{bmatrix} \in \mathbb{R}^n$, then by using equation \eqref{vectaddgrp}) we have \\\\
+		      $v \oplus  \overrightarrow{0} = \begin{bmatrix}
+			                                v_1 \\ v_2 \\ . \\. \\ v_n 
+			                               \end{bmatrix} \oplus \begin{bmatrix}
+			0 \\ 0 \\. \\. \\0
+		      \end{bmatrix} = \begin{bmatrix}
+			v_1+0 \\ v_2+0 \\. \\. \\v_n+0
+		      \end{bmatrix} = \begin{bmatrix}
+			v_1 \\ v_2 \\. \\. \\v_n
+		      \end{bmatrix} = v \\
+		      \mbox{ Also,} \overrightarrow{0} \oplus v = \begin{bmatrix}
+			0 \\ 0 \\. \\. \\0
+		      \end{bmatrix} \oplus \begin{bmatrix}
+			v_1 \\ v_2 \\. \\. \\ v_n
+		      \end{bmatrix}  = \begin{bmatrix}
+			0+v_1 \\ 0+v_2 \\. \\. \\ 0+v_n
+		      \end{bmatrix} = \begin{bmatrix}
+			v_1 \\ v_2 \\. \\. \\ v_n
+		      \end{bmatrix} = v$ \\\\
+Hence, $v \oplus  \overrightarrow{0} = \overrightarrow{0}  \oplus v $ holds \hspace{2mm} $\forall v \in \mathbb{R}^n$ where
+$\overrightarrow{0}$ is the identity element.
+ 
+    \item \textbf{Existence of inverses : } Let $v \in \mathbb{R}^n$ where $v = \begin{bmatrix} 
+                                                                                 v_1 \\ v_2 \\ .\\ .\\ v_n
+                                                                                \end{bmatrix}
+$.\\Since $v_i \in \mathbb{R} \hspace{2mm} \forall i = 1,2,...n \implies -v_i \in \mathbb{R} \implies \begin{bmatrix} 
+                                                                                 -v_1 \\ -v_2 \\ .\\ .\\ -v_n
+                                                                                \end{bmatrix} \in \mathbb{R}^n$. Now let 
+                                                                                $v'=\begin{bmatrix} 
+                                                                                 -v_1 \\ -v_2 \\ .\\ .\\ -v_n
+                                                                                \end{bmatrix}$. Then, using equation \eqref{vectaddgrp}
+                                                                                we have, \\
+$ 
+    \begin{array}{rll}
+    v \oplus v' &=
+      \begin{bmatrix}
+	v_1 \\ v_2 \\ . \\. \\ v_n 
+      \end{bmatrix} \oplus \begin{bmatrix}
+			          -v_1 \\ -v_2 \\ . \\. \\ -v_n 
+			                               \end{bmatrix} & \\
+     &= \begin{bmatrix}
+	v_1 + (-v_1) \\ v_2+ (-v_2) \\ . \\. \\ v_n+ (-v_n) 
+       \end{bmatrix} =\begin{bmatrix}
+			            0 \\ 0 \\ . \\. \\ 0 
+			                            \end{bmatrix} = \overrightarrow{0}&       
+    \end{array}\\    
+    \begin{array}{rll}
+    \mbox{Also, } v' \oplus v &= \begin{bmatrix}
+			          -v_1 \\ -v_2 \\ . \\. \\ -v_n 
+			                               \end{bmatrix} \oplus
+      \begin{bmatrix}
+	v_1 \\ v_2 \\ . \\. \\ v_n 
+      \end{bmatrix} & \\
+      
+     &= \begin{bmatrix}
+	-v_1 + v_1 \\ -v_2+ v_2 \\ . \\. \\ -v_n+v_n) 
+       \end{bmatrix} =\begin{bmatrix}
+			            0 \\ 0 \\ . \\. \\ 0 
+			                            \end{bmatrix} = \overrightarrow{0}&       
+    \end{array}\\
+    $\\ \\
+    
+    Hence, $v \oplus v' = v' \oplus v = \overrightarrow{0}$. 
+ \end{itemize}
+ Hence, $(\mathbb{R}^n, \oplus)$ is a group.
+ 
+ \paragraph{Example 2: }\emph{Consider $V =  \mathbb{R}^{+} = \{ u \in \mathbb{R} | u > 0 \}$. 
+ Operation $\oplus$ in $V$ is defined as 
+ \begin{equation}
+  u \oplus v  = u.v 
+  \label{exp2addgrp}
+ \end{equation}
+  where ``.'' is usual multiplication 
+ in real numbers. Show that the $(V,\oplus)$ is a group}
+ 
+\paragraph{Solution : } In order to prove $\mathbb{R}^+$ is a group, we check all its properties. 
+
+ \begin{itemize}
+  \item \textbf{Closure Property: }$u \oplus v  = u.v$ and $u,v \in \mathbb{R}^{+}$  
+  and since the product of two positive real number is also a positive real number 
+  hence $ \forall u,v \in \mathbb{R}^+, u \oplus v \in \mathbb{R}^+$.
+  
+  \item \textbf{Associativity: } $\forall u,v,w \in \mathbb{R}^+$,  \\
+  
+  $
+  \begin{array}{lll}
+  (u \oplus v) \oplus w  &= (u.v) \oplus w     & \mbox{ from eq} \eqref{exp2addgrp}\\
+  			  &= q \oplus w         & \mbox{ let } q= u.v \\ 
+  			  &= q.w                & \mbox{ from eq} \eqref{exp2addgrp}\\ 
+			  &= (u.v).w            & \mbox{ Putting } q = u.v \\
+			  &= u.(v.w)	         & \mbox{ Multiplication is associative in } \mathbb{R} \\
+			  &= u.(v \oplus w)     & \mbox{ from eq} \eqref{exp2addgrp}\\
+			  &= u \oplus ( v \oplus w) &\mbox{ from eq} \eqref{exp2addgrp} 
+  \end{array}
+$\\\\
+Hence, $(u \oplus v) \oplus w =  u \oplus (v \oplus w)$ holds $\forall u,v,w \in \mathbb{R}^+$. 
+  
+ \item \textbf{Existence of identity element : } Since, $1 \in \mathbb{R}^+$ we have, \\ 
+ $v \oplus 1 = v.1 = v$ holds $\forall v \in \mathbb{R}^+$.\\
+ Also, $1 \oplus v = 1.v = v$ holds $\forall v \in \mathbb{R}^+$.\\
+ Clearly, 1 is the identity element of $(\mathbb{R}^+, \oplus)$.
+ 
+ \item \textbf{Existence of inverses : } Let $v \in \mathbb{R}^+ \implies v' = \displaystyle \frac{1}{v} \in \mathbb{R}^+$. 
+Hence,
+ $
+ \begin{array}{lll}
+  v \oplus v'  &=  v . \displaystyle \frac{1}{v} & \\
+	       &=  1                             &  \mbox{ From equation}\eqref{exp2addgrp}\\
+ \end{array}
+ $ \\\\
+ Also, \\\\
+  $
+ \begin{array}{lll}
+  v' \oplus v  &=  \displaystyle \frac{1}{v}.v & \\
+	       &=  1                             &  \mbox{ From equation}\eqref{exp2addgrp}\\
+ \end{array}
+ $ \\\\
+Hence, $\displaystyle \frac{1}{v}$ exist for all every $v \in \mathbb{R}^+$ and it is the inverse element.
+  \end{itemize}
+  
+ Clearly, $(\mathbb{R}^+, \oplus)$ is a group.
+  
+  \paragraph{Example 3: }\emph{Consider $P_n$ is the set of ploynomials of degree less than or equal to 
+  $n$.}
+  \begin{equation*}
+   P_n = \{ p(x) | p(x) = (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \mbox{ such that } a_i \in \mathbb{R} \hspace{3mm} \forall i = 1,2,3..,n\}
+  \end{equation*}
+  
+  \emph{Operation $\oplus$ in $P_n$ is defined as }
+  \begin{equation}
+  \begin{array}{ll}
+  p \oplus q &= (a_n x^n + a_{n-1} x^{n-1} + .. +a_0) \oplus (b_n x^n + b_{n-1} x^{n-1} + .. +b_0) \\
+             &= (a_n+b_n) x^n + (a_{n-1}+b_{n-1}) x^{n-1} + .. +(a_0+b_0)
+  \end{array}
+  \label{exp3addgrp}
+  \end{equation} 
+  \emph{Show that the $(P_n,\oplus)$ is a group.}
+  
+  \paragraph{Solution : } In order to prove $P_n$ is a group, we check all its properties. 
+  Let $p,q,r \in P_n$ and they are defined as\\$
+  \begin{array}{ll}
+   p &= (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \\
+   q &= (b_n x^n + b_{n-1} x^{n-1} + ... +b_0) \\
+   r &= (c_n x^n + c_{n-1} x^{n-1} + ... +c_0)
+  \end{array}$
+ 
+ \begin{itemize}
+ 
+  \item \textbf{Closure Property: }$ \forall p,q \in P_n$ from equation \eqref{exp3addgrp} we have
+  \begin{equation}
+    p \oplus q  = (a_n+b_n) x^n + (a_{n-1}+b_{n-1}) x^{n-1} + ... +(a_0+b_0)
+  \end{equation}
+  Since, $a_i,b_i \in \mathbb{R} \hspace{3mm} \forall i = 1,2,3..n \implies a_i+b_i \in \mathbb{R}$. Hence, $p \oplus q \in P_n$.
+  
+  \item \textbf{Associativity: }$\forall p,q,r \in P_n$, we have by using equation \eqref{exp3addgrp} and associative
+  property of reals\\
+  $
+  (p \oplus q) \oplus r =\\
+  \begin{array}{ll}
+   = ((a_n+b_n) x^n + (a_{n-1}+b_{n-1}) x^{n-1} + ... +(a_0+b_0)) \oplus &\\
+   (c_n x^n + c_{n-1} x^{n-1} + ... +c_0)&\\ 
+   = ( (a_n+b_n)+c_n) x^n + ((a_{n-1}+b_{n-1})+c_{n-1}) x^{n-1} + ... +((a_0+b_0)+c_0)    &   \\
+   = ( a_n+(b_n+c_n)) x^n + (a_{n-1}+(b_{n-1}+c_{n-1})) x^{n-1} + ... +(a_0+(b_0+c_0))    & \\
+   = p \oplus ((b_n+c_n) x^n + (b_{n-1}+c_{n-1}) x^{n-1} + ... +(b_0+c_0))&\\	
+   = p \oplus(q \oplus r)  &\\  
+  \end{array}
+  $\\\\
+  Hence, $(p \oplus q) \oplus r = p \oplus(q \oplus r)$ \hspace{3mm} $\forall p,q,r \in P_n$.
+     
+ \item \textbf{Existence of identity element : }  Since \textbf{0} $= 0 x^n + 0 x^{n-1} + ... +0 \in P_n$ i.e polynomial with all
+ coefficents zero (\emph{Zero Polynomial}), then by using equation \eqref{exp3addgrp} we have, \\
+ $\begin{array}{ll}
+  p \oplus \mbox{\textbf{0}} &= (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \oplus (0 x^n + 0 x^{n-1} + ... +0) \\
+                             &= (a_n+0) x^n + (a_{n-1}+0) x^{n-1} + ... +(a_0+0)\\
+                             &= a_n x^n + a_{n-1} x^{n-1} + ... +a_0 \\
+                             &= p
+ \end{array}$ \\\\
+ Similarly,\\
+ $\begin{array}{ll}
+  \mbox{\textbf{0}} \oplus p &= (0 x^n + 0 x^{n-1} + ... +0) \oplus (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \\
+                             &= (0+a_n) x^n + (0+a_{n-1}) x^{n-1} + ... +(0+a_0)\\
+                             &= a_n x^n + a_{n-1} x^{n-1} + ... +a_0 \\
+                             &= p
+ \end{array}$ \\ \\
+ Hence, $p \oplus$\textbf{0} = \textbf{0}$\oplus p =p$ \hspace{2mm} $\forall p \in P_n$.
+
+ \item \textbf{Existence of inverses : } For each $ p \in P_n $ there exists a $p'$ such that
+ if $p = a_n x^n + a_{n-1} x^{n-1} + ... +a_0$ then $p' = -a_n x^n + (-a_{n-1} x^{n-1}) + ... +(-a_0)$.
+ $p' \in P_n$ because as $a_i \in \mathbb{R} \implies -a_i \in \mathbb{R} \hspace{2mm} \forall i = 1,2,...n$.  
+ So using equation \eqref{exp3addgrp} we have,\\\\
+ $
+ p \oplus p' =\\
+ \begin{array}{rll}
+  &= (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \oplus ((-a_n x^n) + (-a_{n-1} x^{n-1}) + ... +(-a_0))  \\
+  &= ((a_n -a_n) x^n + (a_{n-1}-a_{n-1}) x^{n-1} + ... +(a_0-a_0))\\
+  &= 0 x^n + 0 x^{n-1} + ... +0 \\
+  &= \mbox{\textbf{0}} 
+ \end{array}
+ $\\\\
+ Similarly, \\
+ $
+ p' \oplus p =\\
+ \begin{array}{rll}
+  &= ((-a_n x^n) + (-a_{n-1} x^{n-1}) + ... +(-a_0)) \oplus (a_n x^n + a_{n-1} x^{n-1} + ... +a_0)  \\
+  &= ((-a_n +a_n) x^n + (-a_{n-1}+a_{n-1}) x^{n-1} + ... +(-a_0+a_0))\\
+  &= 0 x^n + 0 x^{n-1} + ... +0 \\
+  &= \mbox{\textbf{0}} 
+ \end{array}
+ $
+ 
+ Hence, $p \oplus p' = p' \oplus p$ = \textbf{0} exists for each $p \in P_n$.
+
+\end{itemize}
+ Hence $(P_n, \oplus)$ is a group.
+
+ 
+
+\section{Abelian Group}
+If in a group $G$ commutative property also holds 
+ \begin{equation*}
+  a*b =  b*a \hspace{1cm} \forall a,b \in G
+ \end{equation*}
+ Then, such a group is called Abelian Group or Commutative group.
+ 
+ \subsection{Solved examples }
+
+We just extend the previous examples (example 1,2 and 3), by checking its commutativity property
+and thereby checking whether they are abelian group or not.
+ \textbf{Commutativity }property states that $\forall u, v \in V$ following holds.
+    \begin{equation}
+      u \oplus v  =  v \oplus u
+    \end{equation}
+    
+ \paragraph{Example 1: } Using equation \eqref{vectaddgrp}
+    $\\
+    \begin{array}{lll}
+	u \oplus v  & = \begin{bmatrix} u_1 \\ u_2 \\. \\. \\u_n \end{bmatrix}  
+	\oplus \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n \end{bmatrix} = 
+		    \begin{bmatrix} u_1+v_1 \\ u_2+v_2 \\. \\. \\u_n+v_n \end{bmatrix} &\\
+		    & = \begin{bmatrix} v_1+u_1 \\ v_2+u_2 \\. \\. \\v_n+u_n \end{bmatrix}= v \oplus u & \mbox{ Associativity property of Reals}\\
+    \end{array}
+    $ \\
+    Hence, $(\mathbb{R}^n,\oplus)$ is an abelian group.
+ 
+ \paragraph{Example 2: } Using equation \eqref{exp2addgrp}
+ $\\
+   \begin{array}{lll}
+     u \oplus v  & = u.v & \\
+                 & = v.u & \mbox{ Multiplication of real numbers is commutative. } \\
+                 & = v \oplus u &
+  \end{array}
+ $ \\
+
+  Hence, $(\mathbb{R}^+,\oplus)$ is an abelian group.
+ 
+ \paragraph{Example 3: } Using equation \eqref{exp3addgrp}
+ $\\
+ \begin{array}{lll}
+     p \oplus q  & = (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) + (b_n x^n + b_{n-1} x^{n-1} + ... +b_0) & \\ 
+                 & = ((a_n+b_n) x^n + (a_{n-1}+b_{n-1}) x^{n-1} + ... +(a_0+b_0)) &\\
+ \end{array}\\
+ $\\
+ Now by using commutativity property of real numbers we have,
+ $\\
+ \begin{array}{lll}
+     p \oplus q & = ((b_n+a_n) x^n + (b_{n-1}+a_{n-1}) x^{n-1} + ... +(b_0+a_0)) &\\
+		 & = (b_n x^n + b_{n-1} x^{n-1} + ... +b_0) \oplus (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) &\\
+                 & = q \oplus p &
+ \end{array}\\
+ $
+
+ Hence, $(P_n,\oplus)$ is an abelian group.
+
+\section{Ring}
+
+A non empty set $R$, together with two binary operations $\oplus$ and $\odot$ is said to form 
+a \emph{Ring} if the following properties are satisfied:
+
+\begin{itemize}
+ \item $(R,\oplus)$ should be an abelian group.
+ \item Associativity property w.r.t to $\odot$ operation
+ \begin{equation}
+  a \odot ( b \odot c) = (a \odot  b) \odot c \hspace{1cm} \forall a,b,c \in R
+ \end{equation}
+ \item Distributive Properties 
+ \begin{enumerate}
+  \item $a \odot (b \oplus c) = a \odot b \oplus a \odot c$ \hspace{1cm} $\forall a,b,c \in R$
+  \item $(b \oplus c) \odot a = b \odot a \oplus c \odot a$ \hspace{1cm} $\forall a,b,c \in R$
+ \end{enumerate}
+\end{itemize}
+
+\subsection{Examples}
+ \begin{enumerate}
+  \item Set of real numbers, rational numbers, integers form rings w.r.t usual addition and
+        multiplication.
+  \item Set of all even numbers $E$ forms a rings w.r.t usual addition and
+        multiplication.
+ \end{enumerate}
+
+\section{Other Definitions}
+\emph{Note : $\textbf{1}$ and $\textbf{0}$ (ie. 1 and 0 in bold font) here after represents multiplicative and additive identity
+w.r.t $\odot$ and $\oplus$ operation respectively.}\\ 
+\paragraph{Commutative Ring: } A ring which follow commutative property w.r.t to $\odot$ operation is 
+called commutative ring.
+
+\paragraph{Ring with Unity: } A ring with the unit element or multiplicative identity is called
+Ring with unity. i.e 
+\begin{equation*}
+ a \odot \textbf{1}  = \textbf{1} \odot a = a \hspace{5mm} \forall a \in R
+\end{equation*}
+Multiplicative identity or unit element is generally denoted by $\textbf{1}$. 
+
+\paragraph{Zero-divisor: } Let $R$ be a ring. An element \textbf{0} $\neq a \in R$ is called zero divisor, if
+$\exists$ an element \textbf{0} $\neq b \in R$ such that  $a \odot b = \textbf{0}$ or $b \odot a = \textbf{0}$.
+
+\paragraph{Integral domain: } A commutative ring $R$ is called Integral Domain if $a \odot b = 0$ in $R$ $\implies$
+either $a = \textbf{0}$ or $b = \textbf{0}$. In other words, a commutative ring $R$ is called integral domain if $R$ has 
+no zero divisors
+
+\paragraph{Unit: } An element $a$ in a ring $R$ with unity, is called invertible (or a unit) w.r.t multiplication
+if $\exists$ some $b \in R$ such that
+\begin{equation*}
+ a \odot b =  b \odot a = \textbf{1}
+\end{equation*}
+
+\paragraph{Division Ring or Skew field: } A ring $R$ with unity is called division ring or skew field if 
+non-zero elements of $R$ form a group with respect to multiplication.
+
+\paragraph{Field: } A commutative division ring is called field.
+
+\subsection{Illustrations of above definitions}
+
+\begin{itemize}
+ 
+ \item Set of real numbers, rational numbers, integers form rings w.r.t usual addition and multiplication. These are all commutative
+ rings with unity.
+ 
+ \item Set $E$ of all even numbers forms a commutative ring, \textbf{without unity} under usual addition and multiplication.
+ 
+ \item Let $M$ be the set of all $2 \times 2$ matrices of integers under matrix addition and matrix multiplications.
+ It is easy to see $M$ forms a ring where zero of ring or additive identity is $\textbf{0} =\begin{bmatrix} 0 & 0 \\ 0& 0 \end{bmatrix}$.
+ Infact it forms a ring with unity with unit element $\textbf{1} = \begin{bmatrix} 1 & 0 \\ 0& 1 \end{bmatrix}$. It is easy to verify that
+ $M$ does not follow commutative property since $A \odot B \neq B \odot A$ (REASON : Matrix multiplication is not commutative).
+  
+ \item Let $F$ be the set of all continuous functions $ f : \mathbb{R} \longrightarrow \mathbb{R}$. Then $F$ forms a ring
+ over addition and multiplication defined below 
+ \begin{equation*}
+  \begin{array}{lll}
+   \forall f,g \in F & & \\
+		      & (f \oplus g)x = f(x) + g(x) & \forall x \in \mathbb{R} \\  
+		      & (f \odot g)x =  f(x)g(x)    &  \forall x \in \mathbb{R} 
+  \end{array}
+ \end{equation*}
+ Zero of the ring is $\textbf{0}: \mathbb{R} \longrightarrow \mathbb{R}$ such that $\textbf{0}(x) = 0 \hspace{3mm} \forall x \in \mathbb{R}$ \\
+ Also, additive inverse (inverse w.r.t $\oplus$ operation) for any $f \in F$ is a function $(-f): \mathbb{R} \longrightarrow \mathbb{R}$ such 
+ that $(-f)(x) = -f(x)$.\\
+ Infact, $F$ would have unity also, namely the function $i:\mathbb{R} \longrightarrow \mathbb{R}$ defined by $i(x) = 1$ for all $x \in \mathbb{R}$.
+ 
+ \end{itemize}
+
+
+\section{Vector Spaces}
+
+Let $V$ be a non-empty set and $(\mathbb{F},\doublecircleplus,\doublecircledot)$ be a field having following properties: 
+
+\begin{enumerate}
+ \item \textbf{Binary Operation :} There should be a binary operation $\oplus$ called \textbf{vector addition} on 
+       $V$ which is defined as 
+
+      \begin{equation}
+	\oplus : V \times V \longrightarrow V
+      \end{equation}
+      
+ \item \textbf{Multiplication Operation :} There should be a \textbf{scalar multiplication} operation $\odot$ on $V$ 
+	which is defined as
+
+      \begin{equation}
+	\odot : \mathbb{F} \times V \longrightarrow V
+      \end{equation}
+ 
+ \item \textbf{$(V,\oplus)$ should be an Abelian group.}
+      \begin{itemize}
+	  \item \textbf{Closure Property: }Since $\oplus$ is a binary operation, $V$ is closed under the operation $\oplus$.
+	  \item \textbf{Associativity: }Associativity property states that $\forall u,v,w \in V$ following should holds.
+		\begin{center}
+		    $(u \oplus v) \oplus w =  u \oplus (v \oplus w)$
+		\end{center}
+   
+	  \item \textbf{Existence of identity element: } $\exists$ $e \in V$ such that 
+    $\forall v \in V $ following condition holds.
+    \begin{equation*}
+      v \oplus e = e \oplus v = v
+    \end{equation*}
+   
+   \item \textbf{Existence of inverses: } For every $ v \in V $ there exists a $v' \in V$ such that 
+    \begin{equation*}
+    v \oplus v' = v' \oplus v = e     
+    \end{equation*}  
+    where $e$ is the identity element of $(V,\oplus)$ and $v'$ is called inverse of $v$. 
+
+    \item \textbf{Commutativity: }Commutativity property states that $\forall u, v \in V$ following should holds.
+    \begin{equation*}
+      u \oplus v  =  v \oplus u
+    \end{equation*}
+   
+     \end{itemize}
+
+    \item \textbf{Distributive Identities :} $\forall u,v \in V$  and $\forall \alpha, \beta \in \mathbb{F}$ 
+  following distributive properties should hold
+  \begin{enumerate}
+    \item $ \alpha \odot (u \oplus v) = \alpha \odot u \oplus \alpha \odot v$
+    \item $ (\alpha \doublecircleplus \beta) \odot v = \alpha \odot v \oplus \beta \odot v$
+  \end{enumerate}
+ 
+  \item $\forall \alpha, \beta \in \mathbb{F}$ and $\forall v \in V$ following should satisfy
+  \begin{equation*}
+   (\alpha \doublecircledot \beta) \odot v = \alpha \odot (\beta \odot v) 
+  \end{equation*}
+
+
+ \item If $\textbf{1}$ is the unit element of $\mathbb{F}$. Then,
+ \begin{equation*}
+   \textbf{1} \odot u  = u
+ \end{equation*}
+ \end{enumerate}
+
+
+\subsection{Solved Examples}
+
+\paragraph{Example 1: }\emph{Consider $V = \{ x | x \in \mathbb{R}^{n} \}$. Operation $\oplus$ in $V$ 
+is defined as $ u \oplus v  = u + v$ where ``+'' is usual component-vise addition between real numbers 
+as shown below }
+
+\begin{equation}
+  \begin{bmatrix}
+    u_1 \\ u_2 \\ . \\. \\ u_n 
+  \end{bmatrix} \oplus \begin{bmatrix}
+			    v_1 \\ v_2 \\ . \\. \\ v_n 
+			\end{bmatrix} =
+  \begin{bmatrix}
+      u_1+v_1 \\ u_2+v_2 \\ . \\. \\ u_n+v_n 
+  \end{bmatrix}
+  \label{vectadd}
+\end{equation}
+
+\emph{Another operation $\odot$ in $V$ is defined as}
+\begin{equation}
+\alpha \odot \begin{bmatrix}
+ u_1 \\ u_2 \\ . \\. \\ u_n 
+\end{bmatrix} = \begin{bmatrix}
+ \alpha u_1 \\ \alpha u_2 \\ . \\. \\ \alpha u_n 
+\end{bmatrix}
+  \label{vectmul}
+\end{equation}
+
+\emph{Show that the $(V,\oplus,\odot)$ is a vector space over field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ 
+where $\mathbb{F}= \mathbb{R}$. Also $\doublecircleplus$ and $\doublecircledot$ is the usual addition and multiplication
+in $\mathbb{R}$.} 
+
+\paragraph{Solution : } In order to prove $V$ is a vector space, we check all its properties. 
+
+\begin{enumerate}
+
+\item \textbf{Binary Operation :} There should be a binary operation $\oplus$ called \textbf{vector addition} on 
+$V$ which is defined as 
+
+\begin{equation}
+   \oplus : V \times V \longrightarrow V
+\end{equation}
+
+From equation \eqref{vectadd}, $u_i + v_i \in \mathbb{R} \hspace{1cm} \forall i = 1,2,3...n$.
+      
+      \begin{center} 
+      $
+      \begin{bmatrix}
+      u_1+v_1 \\ u_2+v_2 \\ . \\. \\ u_n+v_n
+      \end{bmatrix} \hspace{2mm} \in \mathbb{R}^n  
+      \implies u \oplus v \in V \hspace{1cm} \forall u,v \in \mathbb{R}^n$
+      \end{center}
+      
+      Clearly, $\oplus$ is a binary operation on $\mathbb{R}^n$.
+ 
+\item \textbf{Multiplication Operation :} There should be a \textbf{scalar multiplication} operation $\odot$ on $V$ 
+which is defined as
+
+\begin{equation}
+   \odot : \mathbb{F} \times V \longrightarrow V
+\end{equation}
+
+In this example, clearly $\odot$ is an multiplication operation on $\mathbb{R}^n$. For all, $\alpha \in \mathbb{R}$ 
+and $u \in V$, 
+ 
+\begin{equation}
+\alpha \odot \begin{bmatrix}
+ u_1 \\ u_2 \\ . \\. \\ u_n 
+\end{bmatrix} = \begin{bmatrix}
+ \alpha u_1 \\ \alpha u_2 \\ . \\. \\ \alpha u_n 
+\end{bmatrix}
+\end{equation}
+ 
+ This is just a scaling operation which will bring the result in $\mathbb{R}^n$. Hence $\mathbb{R}^n$ is closed under 
+ scalar multiplication $\odot$.
+ 
+\item \textbf{Abelian Group: }In previous sections (section 1.1 and 1.2) we have already proved that 
+ $(\mathbb{R}^n,\oplus)$ is an Abelian group.
+ 
+\item \textbf{Distributive Identities :} $\forall u,v \in \mathbb{R}^n$  and $\forall \alpha, \beta \in \mathbb{R}$ 
+  following distributive properties should hold
+  \begin{enumerate}
+    \item $ \alpha \odot (u \oplus v) = \alpha \odot u \oplus \alpha \odot v$
+    \item $ (\alpha \doublecircleplus \beta) \odot v = \alpha \odot v \oplus \beta \odot v$
+  \end{enumerate}
+  We have to check these properties for $(\mathbb{R}^n,\oplus,\odot)$ over field $(\mathbb{R},\doublecircleplus,\doublecircledot)$. 
+  
+  
+  \begin{enumerate}
+    \item  Using equation \eqref{vectadd} and \eqref{vectmul}   
+   $\\
+      \begin{array}{lll}
+      \alpha \odot (u \oplus v) &= \alpha \odot \left( \begin{bmatrix} u_1 \\ u_2 \\. \\. \\u_n \end{bmatrix} 
+				    \oplus \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n    \end{bmatrix}\right) =
+				  \alpha \odot \begin{bmatrix} u_1+v_1 \\ u_2+v_2 \\. \\. \\u_n+v_n \end{bmatrix} &\\
+				 &= \begin{bmatrix} \alpha(u_1+v_1) \\ \alpha(u_2+v_2) \\. \\. \\\alpha(u_n+v_n) \end{bmatrix} =
+				  \begin{bmatrix} \alpha u_1+ \alpha v_1 \\ \alpha u_2 + \alpha v_2 \\. \\. \\\alpha u_n + \alpha v_n \end{bmatrix} & \\
+				 &= \begin{bmatrix} \alpha u_1 \\ \alpha u_2  \\. \\. \\\alpha u_n  \end{bmatrix} \oplus \begin{bmatrix} \alpha v_1 \\ \alpha v_2 \\. \\. \\\alpha v_n \end{bmatrix} & \\
+				 &= \alpha \odot  \begin{bmatrix} u_1 \\ u_2 \\. \\. \\u_n \end{bmatrix} \oplus \alpha \odot \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n \end{bmatrix} & \\
+				 &= \alpha \odot u \oplus \alpha \odot v &\\
+      \end{array}
+    $\\
+  Hence, $ \alpha \odot (u \oplus v) = \alpha \odot u \oplus \alpha \odot v$.
+  
+  \item Using equation \eqref{vectadd} and \eqref{vectmul} 
+  $\\
+  \begin{array}{lll}
+   (\alpha \doublecircleplus \beta) \odot v &= ( \alpha + \beta) \odot \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n    \end{bmatrix} 
+				    = \begin{bmatrix} (\alpha+\beta)v_1 \\ (\alpha+\beta)v_2 \\. \\. \\(\alpha+\beta)v_n    \end{bmatrix} & \\
+				    &= \begin{bmatrix} \alpha v_1 + \beta v_1 \\ \alpha v_2 +\beta v_2 \\. \\. \\ \alpha v_n + \beta v_n    \end{bmatrix} 
+				    = \begin{bmatrix} \alpha v_1 \\ \alpha v_2  \\. \\. \\ \alpha v_n  \end{bmatrix} \oplus \begin{bmatrix} \beta v_1 \\ \beta v_2 \\. \\. \\ \beta v_n    \end{bmatrix} &\\ 
+				    &= \alpha \odot \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n    \end{bmatrix} \oplus \beta \odot \begin{bmatrix} v_1 \\ v_2 \\. \\. \\v_n    \end{bmatrix}
+				    = \alpha \odot v \oplus \beta \odot v
+  \end{array}
+  $\\
+  Hence, $ (\alpha \doublecircleplus \beta) \odot v = \alpha \odot v \oplus \beta \odot v$
+  \end{enumerate}
+
+\item $\forall \alpha, \beta \in \mathbb{R}$ and $\forall v \in V$ we have,
+  \begin{equation*}
+  \begin{array}{lll}
+   (\alpha \doublecircledot \beta) \odot v 
+   &= (\alpha \beta) \odot \begin{bmatrix} v_1 \\ v_2 \\ . \\ . \\ v_n\end{bmatrix} & (\doublecircledot \mbox{ is usual multiplication over } \mathbb{R})  \\
+   &= \gamma \odot \begin{bmatrix} v_1 \\ v_2 \\ . \\ . \\ v_n\end{bmatrix} & (\mbox{Let }\gamma =(\alpha \beta))\\
+   &= \begin{bmatrix} \gamma v_1 \\ \gamma v_2 \\ . \\ . \\ \gamma v_n\end{bmatrix} & \mbox{Using equation }\eqref{vectmul}\\
+   &= \begin{bmatrix} (\alpha \beta) v_1 \\ (\alpha \beta) v_2 \\ . \\ . \\ (\alpha \beta) v_n\end{bmatrix} & 
+   \mbox{ Since }\gamma = (\alpha \beta)\\
+  \end{array}
+  \end{equation*}
+   Now, since  $\alpha, \beta \in \mathbb{R}$ and $v_i \in \mathbb{R} \forall i = 1,2,3..n$, then by using 
+   associative property of reals we have,\\
+\begin{equation*}
+  \begin{array}{lll}
+   (\alpha \doublecircledot \beta) \odot v 
+      &= \begin{bmatrix} \alpha ( \beta v_1) \\ \alpha (\beta v_2) \\ . \\ . \\ \alpha (\beta v_n)\end{bmatrix} & \\
+      &= \alpha \odot \begin{bmatrix} ( \beta v_1) \\ (\beta v_2) \\ . \\ . \\ (\beta v_n) \end{bmatrix} & \mbox{From equation }\eqref{vectmul}\\     
+  \end{array}
+  \end{equation*}
+  
+  \begin{equation*}
+  \begin{array}{lll}
+   &= \alpha \odot \left( \beta \odot \begin{bmatrix} v_1 \\ v_2 \\ . \\ . \\ v_n \end{bmatrix} \right) & \mbox{From equation }\eqref{vectmul}\\
+      &= \alpha \odot (\beta \odot v) &\\
+  \end{array}
+   \end{equation*}
+  Hence , $(\alpha \doublecircledot \beta) \odot v = \alpha \odot (\beta \odot v)$
+
+\item $\textbf{1}$ or unit element of field $(\mathbb{R}, \doublecircleplus, \doublecircledot)$ is 1. Hence,
+\begin{equation*}
+\textbf{1} \odot u  = 1 \odot \begin{bmatrix} u_1 \\ u_2 \\. \\. \\u_n  \end{bmatrix} = 
+ \begin{bmatrix} 1.u_1 \\ 1.u_2 \\. \\. \\1.u_n    \end{bmatrix} =\begin{bmatrix} u_1 \\ u_2 \\. \\. \\u_n    \end{bmatrix} 
+\end{equation*}
+
+\end{enumerate}
+
+ 
+ \paragraph{Example 2: }\emph{Consider $V =  \mathbb{R}^{+} = \{ u \in \mathbb{R} | u > 0 \}$. Operation $\oplus$ in $V$ is 
+ defined as $ u \oplus v  = u.v$ where ``.'' is usual multiplication in real numbers. Another operation $\odot$ in $V$ is 
+ defined as $ \alpha \odot u = u^{\alpha}$. Show that the $(V,\oplus,\odot)$ is a vector space over field 
+ $(\mathbb{F},\doublecircleplus,\doublecircledot)$ where $\mathbb{F}= \mathbb{R}$. $\doublecircleplus$ and $\doublecircledot$ are the usual addition 
+ and multiplication over $\mathbb{R}$.
+ } 
+\paragraph{Solution : } In order to prove $V$ is a vector space, we check all its properties. 
+
+\begin{enumerate}
+
+\item \textbf{Binary Operation: }There should be a binary operation $\oplus$ called
+ \textbf{vector addition} on $\mathbb{R}^+$ which is defined as 
+ \begin{equation*}
+   \oplus : \mathbb{R}^+ \times \mathbb{R}^+ \longrightarrow \mathbb{R}^+
+ \end{equation*}
+ 
+ In this example, clearly $\oplus$ is a binary operation. For all $u,v \in V$, 
+ \begin{equation}
+ \oplus(u,v) = u \oplus v  = u.v 
+ \label{exp2add}
+ \end{equation}
+ Since $u,v \in \mathbb{R} \implies u.v \in \mathbb{R}^{+}$ (product of two positive real number is also a positive real number).
+ 
+ \item \textbf{Multiplication Operation :} There should be a scalar multiplication operation $\odot$ on $\mathbb{R}^+$ which is 
+ defined as
+ \begin{center}
+  $ \oplus : \mathbb{R} \times \mathbb{R}^+ \longrightarrow \mathbb{R}^+$
+ \end{center}
+  In this example, clearly $\odot$ is an multiplication operation on $\mathbb{R}^+$. For all, 
+ $\alpha \in \mathbb{R}$ and $u \in \mathbb{R}^+$, 
+ \begin{equation}
+ \odot(\alpha,u) = \alpha \odot u = u^{\alpha} 
+  \label{exp2mul}
+ \end{equation}
+ 
+ $\alpha \in \mathbb{R}$ and $u \in \mathbb{R}^{+} \implies u^{\alpha} \in R^{+}$ clearly, result of 
+ $\odot$ operation $ \in V$.
+ 
+ \item \textbf{Abelian Group: }In previous sections (section 1.2 and 1.2) we already proved that 
+ $(\mathbb{R}^+,\oplus)$ is an abelian group.
+ 
+\item \textbf{Distributive Identities :} $\forall u,v \in \mathbb{R}^+$  and $\forall \alpha, \beta \in \mathbb{R}$ 
+following distributive properties holds.
+\begin{enumerate}
+ \item $ \alpha \odot (u \oplus v) = \alpha \odot u \oplus \alpha \odot v$
+ \item $ (\alpha \doublecircleplus \beta) \odot v = \alpha \odot v \oplus \beta \odot v$
+\end{enumerate}
+
+ \begin{enumerate}
+  \item 
+  $\alpha \odot (u \oplus v)\\
+  \begin{array}{lll}
+    &= \alpha \odot (u.v) & \\
+			      &= (u.v)^{\alpha} & \\
+			      &=  u^{\alpha}.v^{\alpha} &\\
+			      &=  (\alpha \odot u).(\alpha \odot v) &\\
+			      &=  \alpha \odot u \oplus \alpha \odot v
+  \end{array}
+ $\\
+  Hence, $ \alpha \odot (u \oplus v) = \alpha \odot u \oplus \alpha \odot v$.
+  
+  \item 
+  $(\alpha \doublecircleplus \beta) \odot v\\
+  \begin{array}{lll}
+    &= ( \alpha + \beta) \odot v & \mbox{ where } '+' \mbox{ is usual addition for real numbers}  \\
+				    &= v^{ \alpha+\beta} & \\
+				    &= v^{\alpha}.v^{\beta} &\\
+				    &= v^{\alpha} \oplus v^{\beta} &\\
+				    &= \alpha \odot v \oplus \beta \odot v 
+\end{array}
+ $\\
+ Hence, $ (\alpha \doublecircleplus \beta) \odot v = \alpha \odot v \oplus \beta \odot v$
+ \end{enumerate}
+
+ \item $\forall \alpha, \beta \in \mathbb{R}$ and $\forall v \in \mathbb{R}^+$ we have,
+  \begin{equation*}
+  \begin{array}{lll}
+   (\alpha \doublecircledot \beta) \odot v  
+   &= (\alpha \beta) \odot  v & (\doublecircledot \mbox{ is usual multiplication over } \mathbb{R})  \\
+   &= \gamma \odot v & \mbox{Let }\gamma =(\alpha \beta)\\
+   &= v^{\gamma} & \mbox{from equation }\eqref{exp2mul}\\
+   &= v^{(\alpha \beta)} & \mbox{ Since, }\gamma = (\alpha \beta)\\
+   &= v^{(\beta \alpha)} & \mbox{ Using associative property of reals} \\
+   &= (v^{\beta})^\alpha & \\
+   &= (\beta \odot v)^\alpha & \mbox{from equation }\eqref{exp2mul}\\
+   &= \alpha \odot (\beta \odot v) &\mbox{from equation }\eqref{exp2mul} 
+   \end{array}
+   \end{equation*}
+   Hence, $(\alpha \doublecircledot \beta) \odot v =\alpha \odot (\beta \odot v)$.
+ 
+\item $\textbf{1}$ or unit element of field $(\mathbb{R}, \doublecircleplus, \doublecircledot)$ is 1. Hence,
+\begin{equation*}
+\textbf{1} \odot u = u^1=u 
+\end{equation*}
+\end{enumerate}
+
+
+\paragraph{Example 3: }\emph{Consider $P_n$ is the set of ploynomials of degree less than or equal to $n$.}
+  \begin{equation*}
+   P_n = \{ P(x) | P(x) = (a_1 x^n + a_2 x^{n-1} + ... +a_n) \mbox{ such that } a_i \in \mathbb{R} \hspace{3mm} 
+   \forall i = 1,2,3..,n\}
+  \end{equation*}
+  \emph{Operation $\oplus$ in $P_n$ is defined as }
+  \begin{equation}
+   p \oplus q = (a_1 x^n + a_2 x^{n-1} + .. +a_n) \oplus (b_1 x^n + b_2 x^{n-1} + .. +b_n) \\ = (a_1+b_1) x^n + 
+  (a_2+b_2) x^{n-1} + .. +(a_n+b_n)
+  \label{exp3add}
+  \end{equation} 
+  \emph{Another operation $\odot$ in $P_n$ is defined as }
+  \begin{equation}
+  \alpha \odot (a_1 x^n + a_2 x^{n-1} + ... +a_n) = (\alpha a_1 x^n + \alpha a_2 x^{n-1} + ... +\alpha a_n) 
+    \label{exp3mul}
+  \end{equation}
+\emph{Show that the $(P_n,\oplus,\odot)$ is a vector space over field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ 
+where $\mathbb{F}= \mathbb{R}$. $\doublecircleplus$ and $\doublecircledot$ are the usual addition 
+and multiplication over reals.
+} 
+  
+
+\paragraph{Solution : } In order to prove $P_n$ is a vector space, we check all its properties. 
+ Let \\$
+  \begin{array}{ll}
+   p &= (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \\
+   q &= (b_n x^n + b_{n-1} x^{n-1} + ... +b_0) \\
+   r &= (c_n x^n + c_{n-1} x^{n-1} + ... +c_0)
+  \end{array}$
+ \begin{enumerate}
+
+ \item \textbf{Binary Operation: }There should be a binary operation $\oplus$ called
+ vector addition on $P_n$ which is defined as 
+ \begin{equation*}
+   \oplus : P_n \times P_n \longrightarrow P_n
+ \end{equation*}
+ From equation \eqref{exp3add}, If $a_i, b_i \in \mathbb{R}$ then $a_i + b_i \in \mathbb{R} \hspace{3mm} \forall i = 1,2,3...n$.
+ Hence, $\forall p,q \in P_n,$ $p \oplus q \in P_n$.
+ 
+ \item \textbf{Multiplication Operation :} There should be a scalar multiplication operation $\odot$ on $P_n$ 
+ which is defined as
+ \begin{center}
+  $ \oplus : \mathbb{R} \times P_n \longrightarrow P_n$
+ \end{center}
+ From equation \eqref{exp3mul}, For all, $\alpha \in \mathbb{R}$ , $\alpha a_i \in \mathbb{R} \hspace{3mm} \forall i =1,2,3...n$.
+ Hence, $\forall p \in P_n,$ $\alpha \odot p \in P_n$.
+  
+ \item \textbf{Abelian Group: }In previous sections (section 1.1 and 1.2) we already proved that $(P_n,\oplus)$ is an abelian group.
+ 
+ \item \textbf{Distributive Identities :} $\forall p,q \in P_n$  and $\forall \alpha, \beta \in \mathbb{R}$ 
+following distributive properties should hold
+\begin{enumerate}
+ \item $ \alpha \odot (p \oplus q) = \alpha \odot p \oplus \alpha \odot q$
+ \item $ (\alpha \doublecircleplus \beta) \odot p = \alpha \odot p \oplus \beta \odot p$
+\end{enumerate}
+
+ \begin{enumerate}
+  \item  
+  $
+  \alpha \odot (p \oplus q) =\\
+  \begin{array}{ll}
+   = \alpha \odot ( (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) \oplus (b_n x^n + b_{n-1} x^{n-1} + ... +b_0)) &\\
+   = \alpha \odot ((a_n+b_n) x^n + (a_{n-1} + b_{n-1}) x^{n-1} + ... +(a_0+b_0))  & \mbox{ from eq}\eqref{exp3add}\\
+   = (\alpha(a_n+b_n) x^n + \alpha(a_{n-1} + b_{n-1}) x^{n-1} + ... +\alpha(a_0+b_0) & \mbox{ from eq}\eqref{exp3mul}\\
+   = \alpha(a_n x^n + a_{n-1} x^{n-1} + ... +a_0) + \alpha (b_n x^n + b_{n-1} x^{n-1} + ... +b_0)  &\\
+   =  (\alpha \odot p)+(\alpha \odot q) & \mbox{ from eq}\eqref{exp3mul}\\
+   =  \alpha \odot p \oplus \alpha \odot q & \mbox{ from eq}\eqref{exp3add}
+  \end{array}
+ $\\
+  Hence, $ \alpha \odot (p \oplus q) = \alpha \odot p \oplus \alpha \odot q$.
+  
+  \item 
+  $
+  (\alpha \doublecircleplus \beta) \odot p \\
+  \begin{array}{ll}
+   = ( \alpha + \beta) \odot (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) & \\
+   \mbox{ where } '+' \mbox{ is usual addition for real numbers}  \\
+   = ((\alpha+\beta)a_n x^n + (\alpha+\beta)a_{n-1} x^{n-1} + ... +(\alpha+\beta)a_0) & \mbox{ from eq.}\eqref{exp3mul}\\
+   = ( \alpha(a_n x^n + a_{n-1} x^{n-1} + ... +a_0) ) + &\\
+     (\beta(a_n x^n + a_{n-1} x^{n-1} + ... +a_0)) &\\
+   = \alpha \odot p \oplus \beta \odot q & \mbox{ from eq.}\eqref{exp3mul}
+  \end{array}
+$\\
+ Hence, $ (\alpha \doublecircleplus \beta) \odot p = \alpha \odot v \oplus \beta \odot p$.
+ \end{enumerate}
+
+ \item $\forall \alpha, \beta \in \mathbb{R}$ and $\forall p \in P_n$ we have,
+  \begin{equation*}
+  \begin{array}{lll}
+   (\alpha \doublecircledot \beta) \odot p
+   &= (\alpha \beta) \odot  (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) & \\
+   &(\doublecircledot \mbox{ is usual multiplication over } \mathbb{R}) & \\
+   &= \gamma \odot (a_n x^n + a_{n-1} x^{n-1} + ... +a_0) & \mbox{Let }\gamma =(\alpha \beta)\\
+   &=  \gamma a_n x^n + \gamma a_{n-1} x^{n-1} + ... + \gamma a_0 & \mbox{from equation }\eqref{exp3mul}\\
+   &= (\alpha \beta) a_n x^n + (\alpha \beta) a_{n-1} x^{n-1} + ... + (\alpha \beta) a_0  & \mbox{Since, }\gamma = (\alpha \beta)\\
+  \end{array}
+  \end{equation*}
+  Now, since  $\alpha, \beta \in \mathbb{R}$ and $a_i \in \mathbb{R} \hspace{2mm} \forall i = 1,2,3..n$, then by using 
+   associative property of reals we have,\\
+\begin{equation*}
+  \begin{array}{lll}
+   (\alpha \doublecircledot \beta) \odot v 
+      &= \alpha (\beta a_n) x^n + \alpha (\beta a_{n-1}) x^{n-1} + ... + \alpha (\beta a_0)  & \mbox{ Since, }\gamma = (\alpha \beta)\\
+      &= \alpha \odot ((\beta a_n) x^n + (\beta a_{n-1}) x^{n-1} + ... + (\beta a_0))  & \mbox{ from equation }\eqref{exp3mul} \\
+      &= \alpha \odot (\beta \odot (a_n x^n + a_{n-1} x^{n-1} + ... + a_0) ) & \mbox{ from equation }\eqref{exp3mul} \\
+      &= \alpha \odot (\beta \odot p)
+  \end{array}
+\end{equation*}
+Hence, $(\alpha \doublecircledot \beta) \odot p =\alpha \odot (\beta \odot p)$
+ 
+ \item $\textbf{1}$ or unit element of field $(\mathbb{R}, \doublecircleplus, \doublecircledot)$ is 1. Hence,\\
+ $\textbf{1} \odot p  = 1 \odot p\\
+ =1 \odot (a_1 x^n + a_2 x^{n-1} + ... +a_n)$ where $1$ is the unit element of $\mathbb{R}$.\\
+ $=(1.a_1 x^n + 1.a_2 x^{n-1} + ... +1.a_n)$ from equation \eqref{exp3mul}\\
+ $=(a_1 x^n + a_2 x^{n-1} + ... +a_n) = p$
+
+\end{enumerate}
+

@@ -1,0 +1,321 @@
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Plain html elements
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+body {
+	font-family: verdana, arial, sans-serif;
+	margin: 0px;
+	font-size: 12px;
+}
+
+td {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+	margin: 0px;
+}
+
+p {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+}
+
+div {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+}
+
+select {
+	font-size: 10px;
+	font-family: verdana, arial, sans-serif;
+}
+
+textarea {
+	font-size: 11px;
+	font-family: verdana, arial, sans-serif;
+}
+
+dt {
+	font-weight: bold;
+}
+
+input {
+	font-size: 11px;
+	font-family: verdana, arial, sans-serif;
+}
+
+h3 {
+	font-family: verdana, arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Navbar and crumbtrail
+   Avoid assigning colors here; instead use [style]/[color]/css.css
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.crumb {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.crumb:hover {
+	text-decoration: underline;
+}
+
+.curcrumb {
+	font-size: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.curnav {
+	font-size: 11px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.navsubhead {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.nav {
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.nav:hover {
+	text-decoration: underline;
+}
+
+.navLocked {
+	font-size: 11px;
+	text-decoration: none;
+}
+
+.navLocked:hover {
+	text-decoration: underline;
+	font-style: italic;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Elements that appear in the drawers
+   Avoid assigning colors here; instead use [style]/[color]/css.css
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+.drawerHead {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 1px;
+}
+
+.drawer * {
+	font-size: 11px;
+}
+
+.drawer a {
+	text-decoration: none;
+}
+
+.drawer a:hover {
+	text-decoration: underline;
+}
+
+.drawerLabel {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.drawer input, .drawer select, .drawer textarea {
+	font-size: 10px;
+	size: 10px;
+	color: 333300;
+	background-color: FFFFFF;
+	border-style: solid;
+	border-width: 1px;
+	border-color: CCCCCC;
+	margin: 2px;
+}
+
+.drawerNote {
+	font-size: 10px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Elements that appear in the content area
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.inpagesubhead {
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.inpagenav {
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.inpagenav:hover {
+	text-decoration: underline;
+}
+
+.inpagenavLocked {
+	font-size: 11px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.inpagenavLocked:hover {
+	text-decoration: underline;
+	font-style: italic;
+	color: #000000;
+}
+
+SELECT.navTiny   
+	{
+	font-size: 9px;  
+	font-family: verdana, arial, helvetica;
+	}
+
+.glossDefTerm{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 150px;
+	z-index: 100;
+	display: none;
+	visibility: none;
+	background: #ffff99;
+	border: solid 1px #000000;
+	padding: 1px 5px 1px 5px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Sitemap
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+select.sitemap
+	{
+	font-weight:bold; 
+	font-size: 14px;
+	}
+
+.sitemaphead 
+	{
+	font-weight: bold;
+	font-size: 14px;
+	}
+.sitemapsubhead
+	{
+	font-size: 12px;
+	}
+	
+.seerelated
+	{
+	font-size: 10px;
+	color: #666666;
+	text-decoration: none;
+	}
+.seerelated:hover
+	{
+	text-decoration: underline;
+	}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+   Miscellaneous
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.author {
+	font-family: verdana, arial, sans-serif;
+	font-weight: none;
+}
+
+.booktitle {
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold
+}
+
+.pagetitle {
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold
+	}
+
+.qnum {
+	font-family: verdana, arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.searchresult {
+	font-size: 9px;
+	text-decoration: none;
+	color: #666666;
+	font-style: italic;
+}
+
+.newsfeed {
+	font-size: 10px;
+}
+
+a.newsfeed:hover {
+	font-size: 10px;
+}
+
+.footer {
+	font-size: 10px;
+}
+
+.intro {
+	font-family: verdana, arial, sans-serif;
+	font-size: 12px;
+}
+
+td.grade {
+	font-family: verdana, arial, sans-serif;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.booktitle {
+	font-family: verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight: bold
+}
+
+.author {
+	font-family: verdana, arial, helvetica;
+	font-size: 12px;
+	font-weight: bold
+}
+
+.diacritic {
+	font-family: verdana, arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+
+.diacritic:HOVER {
+	text-decoration: underline;
+}
+
+.feedback {
+	font-weight: bold;
+}

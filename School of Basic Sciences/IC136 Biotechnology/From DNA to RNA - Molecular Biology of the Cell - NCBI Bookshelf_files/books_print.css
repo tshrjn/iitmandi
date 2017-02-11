@@ -1,0 +1,28 @@
+html body , body.book-part , div.content, div.col , div.grid , div.twelve_col
+{height:100%; overflow:visible !important; background-color:white; float:none; }
+
+div.shadow{-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow:none; }
+
+div.eight_col {width: 82.3333%;}
+@media print {.objectonly .content{width:82.3333%}} 
+
+.four_col , 
+#universal_header, .header, .pmh_header ,
+.navigation-wrap , .goto ,
+.breadcrumbs,
+#NCBIFooter_dynamic , #footer , 
+a.bktoc_tgllnk , .bktoc_all_cntnr
+{display:none;}
+
+div.content a{color:#000000;border-bottom:1px solid #DDDDDD;text-decoration:none;}
+div.content a:hover, div.content a:active{color:#000000;border-bottom:1px solid #DDDDDD;}
+div.content a:visited{color:#000000;border-bottom:1px solid #DDDDDD;}
+a.figpopup:hover{background-color:#FFFFFF;-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none;}
+
+div.bk_prnt {display:block;}
+span.bk_prnt {display:inline;}
+.bk_noprnt{display:none;}
+
+.bk_prnt_sctn {page-break-before:always;}
+.bk_prnt_obj {page-break-before:always}
+.bk_prnt_obj.bk_first_prnt_obj{page-break-before:avoid}

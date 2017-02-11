@@ -1,0 +1,105 @@
+\section{Vector Sub-Spaces}
+%
+%Let $(V,\oplus,\odot)$ be a vector space over the field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ then
+%        \begin{enumerate}
+%         \item $\alpha\odot 0_{V}=0_{V}$\hspace*{2 in}$\left\lbrace\alpha\epsilon F, 0_{V}\epsilon V\right\rbrace$
+%         \item $0_{F}\odot u=0_{V}$ \hspace*{1.9 in}$\left\lbrace 0_{F}\epsilon F,u\epsilon V\right\rbrace$
+%         \item $\doublecircleminus\odot u=\ominus u$ \hspace*{1.7 in} $\left\lbrace\doublecircleminus 1 \epsilon F,u\epsilon V\right\rbrace$
+%        \end{enumerate}
+%
+\textbf{Theorem } \emph{Let $(V,\oplus,\odot)$ be a vector space over the field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ 
+and $S$ be a non-empty subset of $V$. Then $S$ will be a subspace of $(V,\oplus,\odot)$ iff the following two properties are 
+satisfied:
+        \begin{itemize}
+         \item $u \oplus v \in S \hspace{1cm}\forall u, v \in S$
+         \item $\alpha \odot v \in S \hspace{1cm} \forall \alpha \in \mathbb{F}, v \in S$
+        \end{itemize}
+        }
+\textbf{Proof:} Given that ($V,\oplus,\odot$) be a vector space over a field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ 
+and $S\subset V$.\\
+First suppose that $S$ is a subspace of $(V,\oplus,\odot)$ over the field $(\mathbb{F},\doublecircleplus,\doublecircledot)$ 
+then we have to show that above two conditions hold.\\
+Since $S$ is a subspace of $(V,\oplus,\odot)$ over the field $(\mathbb{F},\doublecircleplus,\doublecircledot)$, 
+therefore $(S,\oplus,\odot)$ itself is a vector space over the field $(\mathbb{F},\doublecircleplus,\doublecircledot)$. Hence,
+    \begin{itemize}
+         \item $u \oplus v \in S \hspace{1cm}\forall u, v \in S$
+         \item $\alpha \odot v \in S \hspace{1cm} \forall \alpha \in \mathbb{F}, v \in S$
+    \end{itemize}
+Conversely suppose that the two conditions hold then we have to show that $S$ will be a subspace of $(V,\oplus,\odot)$ over the
+field $(\mathbb{F},\doublecircleplus,\doublecircledot)$.\\
+The first condition above implies that $S$ satisfies closure property w.r.t. $\oplus$.\\
+Since $S$ is a sub-set of $V$ hence $S$ satisfies associativity and commutativity w.r.t. $\oplus$. i.e.
+   \begin{enumerate}
+    \item $(u \oplus v) \oplus w = u \oplus (v \oplus w) \hspace{0.2 in} \forall \hspace{0.05 in} u, v, w \in S$.
+    \item $u \oplus v = v \oplus u \hspace{0.2 in} \forall \hspace{0.05 in} u, v \in S$.
+   \end{enumerate}
+Also since, $\alpha \odot u \in S \hspace{0.1 in} \forall \alpha \in F, u \in S$.\\
+Choosing $\alpha = \textbf{0}_{F}$ (the additive identity of the field $\mathbb{F}$), we get,\\
+$\textbf{0}_{F} \odot u \in S \hspace{0.1 in} \forall \hspace{0.1 in} u \in S \implies \textbf{0}_{V} \in S$ \{Since $\textbf{0}_{F} \odot u = \textbf{0}_{V}$\}\\
+Hence, $S$ contains the additive identity.\\
+Again, choosing $\alpha = \doublecircleminus \textbf{1}$ \{the additive inverse of the unit element of the field $\mathbb{F}$\}, We get,\\
+$\doublecircleminus \textbf{1} \odot u \in S \hspace{0.1 in} \forall \hspace{0.1 in} u \in S$ $\implies \ominus u \in S \hspace{0.1 in} \forall \hspace{0.1 in} u \in S$, \hspace{0.05 in} \{Since $\doublecircleminus \textbf{1} \odot u = \ominus u$\}\\
+Hence, $S$ contains additive inverse of all its elements.\\
+Since all the properties of abelian group are satisfied, hence $(S, \oplus)$ is an abelian group.\\
+The second condition above implies that $S$ satisfies scalar multiplication property w.r.t. the external composition $\odot$.\\
+Since $S$ is a sub-set of $V$, the following properties would obliviously be satisfied
+    \begin{enumerate}
+        \item $\alpha\odot(u\oplus v) = \alpha\odot u\oplus \alpha \odot u$\hspace{0.2 in}$\left\lbrace \forall\hspace{0.05 in}\alpha \in F, u,v \in \right\rbrace$
+        \item $(\alpha \doublecircleplus \beta)\odot u = \alpha \odot u \oplus \beta \odot u$\hspace{0.2 in}$\left\lbrace\alpha,\beta \in F;u \in S\right\rbrace$
+        \item $(\alpha \doublecircledot \beta)\odot u = \alpha \odot (\beta \odot u)$ \hspace{0.2 in}$\left\lbrace\alpha,\beta \in F; u\in S\right\rbrace$
+        \item $\textbf{1} \odot u =  u \hspace{0.2 in} \{ \forall u \in S$ and $\textbf{1}$ is the unit element of $\mathbb{F}$ \}.
+    \end{enumerate}
+Since, all the properties of a vector space is satisfied; hence $S$ is a subspace.\\
+
+\textbf{Theorem } \emph{Let $(V,\oplus,\odot)$ be a vector space over a field $(\mathbb{F}, \doublecircleplus, \doublecircledot)$ and $(U, \oplus, \odot)$ and $(W,\oplus, \odot)$be two subspaces of $(V,\oplus,\odot)$ over $(\mathbb{F}, \doublecircleplus, \doublecircledot)$,then
+\begin{enumerate}
+  \item $U \cap W$ is also subspace of $V$.
+  \item $U \cup W$ will be subspace of $V$ iff either $U\subseteq W$ or $W\subseteq U$.
+\end{enumerate}
+}
+\textbf{Proof } \begin{enumerate}
+  \item
+  Since $(U, \oplus, \odot)$ and $(W,\oplus, \odot)$ are subspaces of $(V,\oplus,\odot)$ $\implies U \subseteq V$ and $W \subseteq V$ $\implies U \cap W \subseteq V$.\\
+Also since $\textbf{0}_{U} (= \textbf{0}_{V}) \in U$ and $\textbf{0}_{W} (= \textbf{0}_{V}) \in W$ $\implies U \cap W \neq \phi$.
+Hence $U \cap W$ is a non-empty subset of $V$.
+Now, to show that $U\cap W$ is a subspace it is sufficient to prove that:
+\begin{enumerate}
+    \item $v_{1} \oplus v_{2} \in U\cap W$ $\forall \hspace {0.05 in} v_{1},v_{2} \in U \cap W$
+    \item $\alpha \odot v \in U\cap W$ $\forall \hspace {0.05 in} \alpha \in \mathbb{F}, v \in U \cap W$
+\end{enumerate}
+Let $v_{1}, v_{2} \in U\cap W$\\
+$\implies v_{1}, v_{2} \in U$ and $v_{1}, v_{2} \in W$ \\
+$\implies v_{1} \oplus v_{2} \in U$ and $v_{1} \oplus v_{2} \in W$ \{Since $U$ and $W$ are vector spaces\}\\
+$\implies v_{1} \oplus v_{2} \in U \cap W$\\
+Hence $U \cap W$ is closed w.r.t. $\oplus$\\
+Let $\alpha \in \mathbb{F}$, $u \in U \cap W \implies u \in U, u \in W$\\
+$\implies \alpha \odot u \in U$ and $\alpha \odot u \in W$ \{Since $U$ and $W$ are vector spaces\}\\
+$\implies \alpha \odot u \in U\cap W$\\
+Hence $U \cap W$ is closed w.r.t. $\odot$\\
+$\therefore$ $(U \cap W, \oplus, \odot)$ is also subspace of $(V, \oplus, \odot)$ over the field $(\mathbb{F}, \doublecircleplus, \doublecircledot)$.
+\item
+First suppose that $U\subseteq W$ or $W\subseteq U$ then we have to prove that $U \cup W$ is a subspace of $V$\\
+Now, $U\subseteq W$ or $W\subseteq U$\\
+$\implies U \cup W = W$ or $U \cap W = U$\\
+$\implies U \cup W$ is a subspace of $V$.
+
+Conversely suppose that $(U \cup W, \oplus, \odot)$ is a subspace of $(V, \oplus, \odot)$ then we have to show that either $U\subseteq W$ or $W\subseteq U$.\\
+Let us suppose that $U\nsubseteq W$ and $W\nsubseteq U$.\\
+Since $U \nsubseteq W \implies \exists \hspace {0.05 in} u \in U$ such that  $u \notin W$.\\
+Since $W \nsubseteq U \implies \exists \hspace {0.05 in} w \in W$ such that  $w \notin U$.\\
+But since $u \in U$ and $w \in W \implies u, w \in U \cup W$.\\
+Also by our assumption $(U \cup W, \oplus, \odot)$ is a subspace of $(V, \oplus, \odot)$ over $(\mathbb{F}, \doublecircleplus, \doublecircledot)$\\
+$\implies u \oplus w \in U \cup W$\\
+Now two cases arise either $u \oplus w \in U$ or $u \oplus w \in W$\\
+If $u \oplus w \in U$ then since $u \in  U$ and $U$ is a subspace $\implies \ominus u \in U$\\
+$\implies (u \oplus w) \oplus (\ominus u) \in U$\\
+$\implies w \in U$\\
+Which is contradiction.\\
+On the other hand if  $u \oplus w \in W$ then since $w \in  W$ and $W$ is a subspace $\implies \ominus w \in W$\\
+$\implies (u \oplus w) \oplus (\ominus w) \in W$\\
+$\implies u \in W$\\
+Which is again a contradiction.
+Since our initial we assume that  $U\nsubseteq W$ and $W\nsubseteq U$ leads to a contradiction in either of the above two cases. Hence our initial assumption is wrong. So, either either $U\subseteq W$ or $W\subseteq U$ 
+\end{enumerate}
+%\end{enumerate}
+

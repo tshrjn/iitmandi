@@ -1,0 +1,103 @@
+/********************************************************************/
+/*  book specific styles  */
+
+/*print (important)*/
+.bk_prnt{display:none;}
+
+/*emphasis*/
+.bk_hlight{background-color:#E6B650}
+.bk_pgobj {font-weight:bold;color:#985735}
+
+.bk_hlight1{background-color:#2C4C9F; color:#FFFFFF; padding:0 0.2em}
+.bk_hlight2{background-color:#59331F; color:#FFFFFF; padding:0 0.2em}
+.bk_hlight3{background-color:#777777; color:#FFFFFF; padding:0 0.2em}
+.bk_hlight4{background-color:#985735; color:#FFFFFF; padding:0 0.2em}
+.bk_hlight5{background-color:#000000; color:#FFFFFF; padding:0 0.2em}
+
+/*std colors*/
+.bk_ncbi_dblue  {color:#2C4C9F}
+.bk_ncbi_lblue  {color:#97B0C8}
+.bk_ncbi_cupper {color:#985735}
+.bk_ncbi_dbrown {color:#59331F}
+.bk_ncbi_lbrown {color:#724128}
+.bk_ncbi_gray   {color:#777777}
+
+/*dnwld icons*/
+.bk_dwnld_icn    {padding-left: 20px}
+.bk_dwnld_movie  {background: transparent url(../../../pmcgifs/bookshelf/static/move-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_csv    {background: transparent url(../../../pmcgifs/bookshelf/static/csv-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_msword {background: transparent url(../../../pmcgifs/bookshelf/static/msword-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_txt    {background: transparent url(../../../pmcgifs/bookshelf/static/txt-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_excel  {background: transparent url(../../../pmcgifs/bookshelf/static/excel-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_pdf    {background: transparent url(../../../pmcgifs/bookshelf/static/pdf-icon.gif) no-repeat 0% 100%}
+.bk_dwnld_ppt    {background: transparent url(../../../pmcgifs/bookshelf/static/ppt-icon.gif) no-repeat 0% 100%}
+
+/*linked images*/
+.img_link{text-decoration:none}
+
+/*from pmc (ComponentID=3479643 /projects/PMC/PMCViewer/non_standard_extras@1.3)*/
+.pmc_boxed-text-box , .pmc_links-box {border:1px solid #ddd; background-color:#f6f6f6; padding:0 0.6923em}
+.pmc_boxed-text-box h2 , .pmc_boxed-text-box h3 , .pmc_boxed-text-box h4 , .pmc_boxed-text-box h5 , .pmc_boxed-text-box h6 {margin:0.6923em 0}
+
+/*pmc style equations (pmc.min.css)*/
+.pmc_disp_formula {text-align:center; width:100%;}
+.pmc_va_top    {vertical-align:top}
+.pmc_va_middle {vertical-align:middle}
+.pmc_hide_overflow {overflow:hidden}
+.pmc_inline_block {max-width:100%}
+
+.bk_equ_label{text-align:right}
+
+/*some global fixed from pmc.min*/
+.main-content img{max-width:100%}
+.main-content img.small-thumb{max-width:100px}
+.main-content {word-wrap:break-word}
+
+/*special request*/
+
+.pre-content h2 {color:black}
+
+/********************************************************************/
+/*  toc  */
+
+body a.bktoc_tgllnk , .body a.bktoc_tgllnk:hover {border-bottom:none; }
+body a.bktoc_tgllnk {padding-right:13px; margin-right:3px; cursor:pointer; margin-left:-17px; zoom:1}/**/
+a.bktoc_tgllnk {background: transparent url(../../../pmcgifs/bookshelf/static/minus.gif) no-repeat scroll 50% 50%}
+a.bktoc_tgllnk_clps {background: transparent url(../../../pmcgifs/bookshelf/static/plus.gif) no-repeat scroll 50% 50%}
+
+.bktoc_all_cntnr {text-align:right;color:#CCCCCC}
+.content .bktoc_all_cntnr a:visited{color:#2F4A8B}
+.content .bktoc_all_cntnr a.inactive{color:#CCCCCC; border:none; text-decoration:none; cursor:default}
+
+/* toc drop down */
+.bk_cntns{padding-right: 17px; background: transparent url(../../../pmcgifs/bookshelf/static/popper_tgt.png) no-repeat 100% 100%}
+.bk_cntns:active{background: transparent url(../../../pmcgifs/bookshelf/static/popper_tgt.png) no-repeat 100% 58%}
+
+#bk_toc_contnr {width: 600px; max-width: 600px; max-height: 500px; overflow: auto; padding: 0 2em 0 0; background-color: white}
+#bk_toc_contnr a {color: #2F4A8B;}
+ul#source-contents {padding:0}
+ul#source-contents.toc-toggle {padding-left: 17px}
+ul#source-contents li {padding: 2px 0}
+
+.toc-page-link { float: right; margin-top: 9px;color: #2F4A8B;}
+#bk_current_entry {font-weight:bold}
+
+/********************************************************************/
+/*  tileshop (from pmc_extras.css)  */
+
+.ts_canvas {border:solid 1px silver;text-decoration:none;}
+.ts_bar {display:block;background-color:#DCF0F4;padding:.3462em 0; text-align:center;margin:auto;max-width:100%;margin:auto;}
+img.tileshop{cursor:pointer;cursor:hand;cursor:url(/corehtml/pmc/css/cursors/zoomin.cur),pointer}/**/
+.ts_bar {position:relative;height:0;padding:0;color:transparent;}
+.ts_bar:after {content: url(../../../pmcgifs/mglss24.png); position: absolute; height: 24px; width: 24px; right: -13px; top: -9px;}
+
+/********************************************************************/
+/* flowplayer definitions (from pmc.css)*/
+.mp-outer {padding: 2px; border: 2px solid #4a4a4a; margin:auto} 
+.mp-inner {background-color:#4a4a4a; text-align:center; padding:0; border: 2px solid #4a4a4a}
+.mp-screen {position: relative; cursor:pointer; .cursor:hand; display:block; text-align:center; text-decoration:none; margin:auto; background-color:#4a4a4a} /**/
+.splash-ph {height: 100%; margin: auto; max-width: 100%} 
+.player-play-btn {position: relative; vertical-align: middle}
+img.player-splash {position:absolute; top:0; left:0; width:100%; height:100%}
+
+

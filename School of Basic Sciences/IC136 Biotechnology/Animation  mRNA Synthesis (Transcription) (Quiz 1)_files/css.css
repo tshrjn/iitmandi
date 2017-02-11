@@ -1,0 +1,46 @@
+/* 
+
+	Put size, weight, and margin tags in shared/shared.css -- use this file only
+	if you need to override colors for a particular gif set.  
+
+*/
+
+
+.nav {
+	color:000000;
+	background-color: #9CADC6;
+}
+
+.navLocked {
+	color:000000;
+	background-color: #9CADC6;
+}
+
+.nav:HOVER {
+	color:000000;
+}
+
+.navLocked:HOVER {
+	color:333333;
+}
+
+.crumb {
+	color:555555;
+}
+
+.curcrumb {
+	color:000000;
+}
+
+.crumb:HOVER {
+	color:000000;
+}
+
+.curnav {
+	color: FFFFFF;
+	background-color: #9CADC6;
+}
+
+.navsubhead {
+	color: 000000;
+}
