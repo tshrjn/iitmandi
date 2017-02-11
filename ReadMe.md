@@ -19,5 +19,4 @@ All files offered here - which come from a chair - can also be obtained from the
 
 ## Migration:
 
-Due to repository size restriction and hence, inability to share content this project is being shifted to https://unistuf.org
-
+Due to repository size restriction and hence, inability to share content this project is being shifted to https://unistuff.org
